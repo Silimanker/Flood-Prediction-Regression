@@ -1,0 +1,39 @@
+﻿Loading C:\Users\Surface\Documents\IS\FloodPredictionRegression\FloodPredictionDataSet\flood.csv
+rows=50,000 features=20 target=FloodProbability warning=none
+baseline test MSE = 0.002489
+
+Grid 1/9: learningRate=0.02, hiddenNodes=8, epochs=300
+Grid 1/9 lr=0.02 hidden=8 | testMSE @50ep=0.000007 @100ep=0.000006 @200ep=0.000004 @300ep=0.000003 | final testMSE=0.000003 R2=0.9989
+Grid 2/9: learningRate=0.02, hiddenNodes=16, epochs=300
+Grid 2/9 lr=0.02 hidden=16 | testMSE @50ep=0.000005 @100ep=0.000005 @200ep=0.000004 @300ep=0.000003 | final testMSE=0.000003 R2=0.9987
+Grid 3/9: learningRate=0.02, hiddenNodes=32, epochs=300
+Grid 3/9 lr=0.02 hidden=32 | testMSE @50ep=0.000003 @100ep=0.000003 @200ep=0.000003 @300ep=0.000002 | final testMSE=0.000002 R2=0.9990
+Grid 4/9: learningRate=0.05, hiddenNodes=8, epochs=300
+Grid 4/9 lr=0.05 hidden=8 | testMSE @50ep=0.000005 @100ep=0.000003 @200ep=0.000002 @300ep=0.000001 | final testMSE=0.000001 R2=0.9994
+Grid 5/9: learningRate=0.05, hiddenNodes=16, epochs=300
+Grid 5/9 lr=0.05 hidden=16 | testMSE @50ep=0.000004 @100ep=0.000003 @200ep=0.000002 @300ep=0.000002 | final testMSE=0.000002 R2=0.9993
+Grid 6/9: learningRate=0.05, hiddenNodes=32, epochs=300
+Grid 6/9 lr=0.05 hidden=32 | testMSE @50ep=0.000003 @100ep=0.000003 @200ep=0.000002 @300ep=0.000002 | final testMSE=0.000002 R2=0.9993
+Grid 7/9: learningRate=0.1, hiddenNodes=8, epochs=300
+Grid 7/9 lr=0.1 hidden=8 | testMSE @50ep=0.000003 @100ep=0.000002 @200ep=0.000001 @300ep=0.000001 | final testMSE=0.000001 R2=0.9997
+Grid 8/9: learningRate=0.1, hiddenNodes=16, epochs=300
+Grid 8/9 lr=0.1 hidden=16 | testMSE @50ep=0.000003 @100ep=0.000002 @200ep=0.000001 @300ep=0.000001 | final testMSE=0.000001 R2=0.9996
+Grid 9/9: learningRate=0.1, hiddenNodes=32, epochs=300
+Grid 9/9 lr=0.1 hidden=32 | testMSE @50ep=0.000003 @100ep=0.000002 @200ep=0.000001 @300ep=0.000001 | final testMSE=0.000001 R2=0.9996
+
+total grid time: 2217.9s
+
+rank  lr     hidden  @50ep     @100ep    @200ep    @300ep    R2
+----  -----  ------  --------  --------  --------  --------  -------
+1     0.1    8       0.000003  0.000002  0.000001  0.000001  0.9997
+2     0.1    16      0.000003  0.000002  0.000001  0.000001  0.9996
+3     0.1    32      0.000003  0.000002  0.000001  0.000001  0.9996
+4     0.05   8       0.000005  0.000003  0.000002  0.000001  0.9994
+5     0.05   32      0.000003  0.000003  0.000002  0.000002  0.9993
+6     0.05   16      0.000004  0.000003  0.000002  0.000002  0.9993
+7     0.02   32      0.000003  0.000003  0.000003  0.000002  0.9990
+8     0.02   8       0.000007  0.000006  0.000004  0.000003  0.9989
+9     0.02   16      0.000005  0.000005  0.000004  0.000003  0.9987
+
+baseline test MSE = 0.002489
+BEST: lr=0.1 hidden=8 testMSE=0.000001 R2=0.9997

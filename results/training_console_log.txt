@@ -1,0 +1,93 @@
+19:36:12  Flood prediction regression - 3-layer MLP with back-propagation.
+19:36:13  Baseline to beat (predict-the-mean test MSE) is shown once data is loaded.
+19:36:13  Loaded flood.csv: 50,000 rows, 20 features, target = FloodProbability.
+19:36:13  Preprocessing: features Min-Max scaled to [0,1] with the statistics fitted on the training split only (no test-set leakage). Target left as-is because it is already a probability in [0,1].
+19:36:13  Split: 40,000 train / 10,000 test (20% held out), seed 42.
+19:36:13  Naive baseline test MSE (always predict the training mean) = 0.002489.
+19:44:31  ----------------------------------------------------------------
+19:44:31  Run: lr(in=0.15, out=0.2), hidden neurons=16, epochs=300, log every 10, split 80%, seed=42.
+19:44:32  epoch     1 | train MSE 0.000079 | test MSE 0.000078 | 0.5s
+19:44:36  epoch    10 | train MSE 0.000006 | test MSE 0.000006 | 4.5s
+19:44:40  epoch    20 | train MSE 0.000004 | test MSE 0.000004 | 9.0s
+19:44:45  epoch    30 | train MSE 0.000004 | test MSE 0.000004 | 13.5s
+19:44:49  epoch    40 | train MSE 0.000003 | test MSE 0.000003 | 17.9s
+19:44:54  epoch    50 | train MSE 0.000003 | test MSE 0.000003 | 22.6s
+19:44:59  epoch    60 | train MSE 0.000002 | test MSE 0.000003 | 27.1s
+19:45:03  epoch    70 | train MSE 0.000002 | test MSE 0.000002 | 31.6s
+19:45:07  epoch    80 | train MSE 0.000002 | test MSE 0.000002 | 36.0s
+19:45:12  epoch    90 | train MSE 0.000002 | test MSE 0.000002 | 40.4s
+19:45:16  epoch   100 | train MSE 0.000002 | test MSE 0.000002 | 44.9s
+19:45:21  epoch   110 | train MSE 0.000002 | test MSE 0.000002 | 49.3s
+19:45:25  epoch   120 | train MSE 0.000002 | test MSE 0.000002 | 53.7s
+19:45:30  epoch   130 | train MSE 0.000001 | test MSE 0.000001 | 58.1s
+19:45:34  epoch   140 | train MSE 0.000001 | test MSE 0.000001 | 62.6s
+19:45:38  epoch   150 | train MSE 0.000001 | test MSE 0.000001 | 67.0s
+19:45:44  epoch   160 | train MSE 0.000001 | test MSE 0.000001 | 72.7s
+19:45:50  epoch   170 | train MSE 0.000001 | test MSE 0.000001 | 78.8s
+19:45:55  epoch   180 | train MSE 0.000001 | test MSE 0.000001 | 83.9s
+19:46:00  epoch   190 | train MSE 0.000001 | test MSE 0.000001 | 89.0s
+19:46:05  epoch   200 | train MSE 0.000001 | test MSE 0.000001 | 94.1s
+19:46:10  epoch   210 | train MSE 0.000001 | test MSE 0.000001 | 99.0s
+19:46:15  epoch   220 | train MSE 0.000001 | test MSE 0.000001 | 103.8s
+19:46:21  epoch   230 | train MSE 0.000001 | test MSE 0.000001 | 109.8s
+19:46:27  epoch   240 | train MSE 0.000001 | test MSE 0.000001 | 115.4s
+19:46:33  epoch   250 | train MSE 0.000001 | test MSE 0.000001 | 121.6s
+19:46:39  epoch   260 | train MSE 0.000001 | test MSE 0.000001 | 127.5s
+19:46:45  epoch   270 | train MSE 0.000001 | test MSE 0.000001 | 133.6s
+19:46:51  epoch   280 | train MSE 0.000001 | test MSE 0.000001 | 139.9s
+19:46:58  epoch   290 | train MSE 0.000001 | test MSE 0.000001 | 146.3s
+19:47:02  epoch   300 | train MSE 0.000001 | test MSE 0.000001 | 151.0s
+19:47:02  ----------------------------------------------------------------
+19:47:02  Training complete in 151.0s (300 epochs).
+19:47:02    train MSE      = 0.000001
+19:47:02    test  MSE      = 0.000001   (baseline 0.002489)
+19:47:02    improvement over baseline = 100.0%
+19:47:03    RMSE = 0.000801 | MAE = 0.000556 | R^2 = 0.9997
+19:47:03    predictions within +/-0.05 of the true value: 100.0%
+19:47:03    best test MSE 0.000001 occurred at epoch 299
+19:47:03  ----------------------------------------------------------------
+19:49:10  Log exported to C:\Users\Surface\Documents\IS\FloodPredictionRegression\training_log_20261102_194903.csv
+19:54:26  ----------------------------------------------------------------
+19:54:26  Grid 1/9: learningRate=0.02, hiddenNodes=8, epochs=300
+19:55:43  Grid 1/9 lr=0.02 hidden=8 | testMSE @75ep=0.000006 @150ep=0.000004 @225ep=0.000003 @300ep=0.000003 | final testMSE=0.000003 R2=0.9989
+19:55:43  Grid 2/9: learningRate=0.02, hiddenNodes=16, epochs=300
+19:58:20  Grid 2/9 lr=0.02 hidden=16 | testMSE @75ep=0.000005 @150ep=0.000004 @225ep=0.000004 @300ep=0.000003 | final testMSE=0.000003 R2=0.9987
+19:58:20  Grid 3/9: learningRate=0.02, hiddenNodes=32, epochs=300
+20:04:27  Grid 3/9 lr=0.02 hidden=32 | testMSE @75ep=0.000003 @150ep=0.000003 @225ep=0.000003 @300ep=0.000002 | final testMSE=0.000002 R2=0.9990
+20:04:27  Grid 4/9: learningRate=0.05, hiddenNodes=8, epochs=300
+20:06:10  Grid 4/9 lr=0.05 hidden=8 | testMSE @75ep=0.000004 @150ep=0.000002 @225ep=0.000002 @300ep=0.000001 | final testMSE=0.000001 R2=0.9994
+20:06:10  Grid 5/9: learningRate=0.05, hiddenNodes=16, epochs=300
+20:09:13  Grid 5/9 lr=0.05 hidden=16 | testMSE @75ep=0.000004 @150ep=0.000003 @225ep=0.000002 @300ep=0.000002 | final testMSE=0.000002 R2=0.9993
+20:09:13  Grid 6/9: learningRate=0.05, hiddenNodes=32, epochs=300
+20:15:57  Grid 6/9 lr=0.05 hidden=32 | testMSE @75ep=0.000003 @150ep=0.000002 @225ep=0.000002 @300ep=0.000002 | final testMSE=0.000002 R2=0.9993
+20:15:57  Grid 7/9: learningRate=0.1, hiddenNodes=8, epochs=300
+20:17:42  Grid 7/9 lr=0.1 hidden=8 | testMSE @75ep=0.000002 @150ep=0.000001 @225ep=0.000001 @300ep=0.000001 | final testMSE=0.000001 R2=0.9997
+20:17:42  Grid 8/9: learningRate=0.1, hiddenNodes=16, epochs=300
+20:20:26  Grid 8/9 lr=0.1 hidden=16 | testMSE @75ep=0.000003 @150ep=0.000002 @225ep=0.000001 @300ep=0.000001 | final testMSE=0.000001 R2=0.9996
+20:20:26  Grid 9/9: learningRate=0.1, hiddenNodes=32, epochs=300
+20:25:41  Grid 9/9 lr=0.1 hidden=32 | testMSE @75ep=0.000002 @150ep=0.000002 @225ep=0.000001 @300ep=0.000001 | final testMSE=0.000001 R2=0.9996
+20:25:41  ----------------------------------------------------------------
+20:25:41  GRID SEARCH RESULTS (ranked by test MSE, 9 configurations)
+20:25:41  lr        hidden  @75ep          @150ep          @225ep          @300ep        
+20:25:41  0.1       8        0.000002  0.000001  0.000001  0.000001
+20:25:41  0.1       16       0.000003  0.000002  0.000001  0.000001
+20:25:41  0.1       32       0.000002  0.000002  0.000001  0.000001
+20:25:41  0.05      8        0.000004  0.000002  0.000002  0.000001
+20:25:41  0.05      32       0.000003  0.000002  0.000002  0.000002
+20:25:41  0.05      16       0.000004  0.000003  0.000002  0.000002
+20:25:41  0.02      32       0.000003  0.000003  0.000003  0.000002
+20:25:41  0.02      8        0.000006  0.000004  0.000003  0.000003
+20:25:41  0.02      16       0.000005  0.000004  0.000004  0.000003
+20:25:41  Grid search table exported to: C:\Users\Surface\Documents\IS\FloodPredictionRegression\FloodPrediction\FloodPrediction\bin\Debug\hyperparameter_results_20261102_202541.csv
+20:25:41  BEST CONFIGURATION: learning rate 0.1, hidden nodes 8, 300 epochs -> test MSE 0.000001 (R^2 0.9997)
+20:25:41  The best values have been copied into the hyper-parameter boxes - press Train to confirm.
+20:25:41  ----------------------------------------------------------------
+20:25:41  ----------------------------------------------------------------
+20:25:41  Grid winner (lr 0.1, hidden 8) in 105.1s (300 epochs).
+20:25:41    train MSE      = 0.000001
+20:25:41    test  MSE      = 0.000001   (baseline 0.002489)
+20:25:41    improvement over baseline = 100.0%
+20:25:41    RMSE = 0.000870 | MAE = 0.000590 | R^2 = 0.9997
+20:25:41    predictions within +/-0.05 of the true value: 100.0%
+20:25:41    best test MSE 0.000001 occurred at epoch 297
+20:25:41  ----------------------------------------------------------------

@@ -1,0 +1,15 @@
+# Build output
+[Bb]in/
+[Oo]bj/
+.vs/
+
+# Visual Studio user state
+*.user
+*.suo
+
+# Local run artifacts
+*.weights
+*.cfg
+hyperparameter_results_*.csv
+training_log_*.csv
+predictions_*.csv
