@@ -310,8 +310,11 @@ FloodPredictionRegression\
 ├─ screenshots\                     ← GUI screenshots used in this document
 ├─ results\                         ← evaluation deliverables for grading / report
 │  ├─ hyperparameter_tuning_results.csv ← 9-config grid search results table (CSV)
-│  ├─ training_console_log.txt      ← full console training and autotune history (TXT)
-│  └─ grid_search_harness.txt       ← headless test harness validation run (TXT)
+│  ├─ grid_search_harness.csv       ← headless test harness results table (CSV)
+│  ├─ grid_search_harness.txt       ← headless test harness raw output (TXT)
+│  ├─ training_log_1_184936 (.txt/.csv) ← Run 1: initial 300-epoch baseline training run
+│  ├─ training_log_2_194903 (.txt/.csv) ← Run 2: verification training run
+│  └─ training_log_3_203115_autotune (.txt/.csv) ← Run 3: full Auto-Tune sweep & results
 ├─ Instruction.png                  ← activity instructions (supplied)
 ├─ About Dataset.docx               ← dataset description (supplied)
 ├─ Sample Code\*.cs                 ← original backneural sample (supplied)

@@ -7,9 +7,9 @@
 *.user
 *.suo
 
-# Local run artifacts
-*.weights
-*.cfg
-hyperparameter_results_*.csv
-training_log_*.csv
-predictions_*.csv
+# Loose scratch run artifacts in the root directory
+/*.weights
+/*.cfg
+/training_log_*.csv
+/hyperparameter_results_*.csv
+/predictions_*.csv

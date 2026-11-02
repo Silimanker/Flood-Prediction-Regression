@@ -1,4 +1,4 @@
-﻿Loading C:\Users\Surface\Documents\IS\FloodPredictionRegression\FloodPredictionDataSet\flood.csv
+Loading C:\Users\Surface\Documents\IS\FloodPredictionRegression\FloodPredictionDataSet\flood.csv
 rows=50,000 features=20 target=FloodProbability warning=none
 baseline test MSE = 0.002489
 
